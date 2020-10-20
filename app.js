@@ -73,20 +73,45 @@ console.log('----------------5. FizzBuzz----------------');
  * と表示するようにしてください。
  */
 for (let i =1; i <= 100; i++) {
-	if () {}
-}
+	if (i % 5 ===0 && i % 3===0) {
+		console.log('FizzBuzz');
+	}else if(i % 3===0) {
+		console.log('Fizz');
+	}else if(i % 5===0) {
+		console.log('Buzz');
+	}else{
+		console.log(i);
+	}
+
+	}
 
 console.log('----------------6.九九----------------');
 /**
  * 九九を表示するプログラムを書いてください。
  */
-
+for (let i =1; i <=9; i++) {
+	for (let j =1; j <=9; j++) {
+		let res = i * j;
+		console.log(res);
+	}
+}
 
 
 console.log('----------------7. 繰り返しの中断、スキップ----------------');
 /**
  * 九九の中で答えが30未満の数値だけ表示してください。
  */
+
+for (let i =1; i <=9; i++) {
+	for (let j =1; j <=9; j++) {
+	let res = i * j;
+	if (res >= 30) {
+	continue;
+	}
+		console.log(res);
+	}
+}
+
 
 
 // チャレンジ問題
@@ -100,6 +125,19 @@ console.log('----------------1. 女湯問題----------------');
  * 女湯に入れる場合は「入れます」、入れない場合は「入れない」と表示してください。
  */
 
+let customer = {age: 30, gender: 'other'};
+
+if (customer['gender'] === 'female')  {
+  console.log('入れます');
+} else {
+  if (customer['age'] <= 5) {
+    console.log('入れます');
+  } else {
+    console.log('入れません');
+  }
+}
+
+// チャレンジ
 console.log('----------------2. 素数を表示するプログラム----------------');
 /**
  * 100以下の素数を表示してください。
@@ -107,3 +145,7 @@ console.log('----------------2. 素数を表示するプログラム------------
  * 素数とは1とその数以外では割り切れない数です。
  * 言い方をかえると約数が2つしかない数です。
  */
+
+for (let i =1; i =100; i++) {
+	
+}
