@@ -12,10 +12,22 @@ console.log('----------------1. 偶数、奇数----------------');
 
 let i = 3;
 
+// if文
 if (i % 2 === 0){
 	console.log('偶数です。');
 } else {
 	console.log('奇数です。');
+}
+
+// Switch文
+// 真偽値（bool型：:true,false）
+switch (i % 2 === 0) {
+	case true:
+	console.log(i + 'は偶数です');
+	break;
+	default:
+	console.log(i + 'は奇数です');
+	break;
 }
 
 
@@ -26,6 +38,7 @@ console.log('----------------2. 合格判定----------------');
  * それ以外の場合は、不合格
  * と表示するプログラムを書いてください。
  */
+
 let math = 75;
 let english = 81;
 let total= math + english;
@@ -33,6 +46,20 @@ let total= math + english;
 if (math >= 60 && english>= 60 && total>=140){
 	console.log('合格');
 }	else {
+		console.log('不合格');
+}
+
+if (math >= 60){
+	if(english >= 60){
+		if(total >= 140){
+			console.log('合格');
+		}else{
+			console.log('不合格');
+		}
+	}else{
+		console.log('不合格');
+	}
+	}else{
 		console.log('不合格');
 }
 
@@ -51,7 +78,6 @@ for (let number of numbers) {
 	}
 }
 	console.log(res);
-
 
 console.log('----------------4. 3倍した数を表示する----------------');
 /**
@@ -85,14 +111,31 @@ for (let i =1; i <= 100; i++) {
 
 	}
 
+console.log('----------------違うバージョン----------------');
+let moji = '';
+for (let i = 1; i <= 100; i++) {
+	moji = i;
+	if (i % 3 === 0){
+		moji = 'Fizz';
+	}
+	if (i % 5 === 0){
+		if (moji != 'Fizz'){
+			moji = '';
+		}
+		moji = moji + 'Buzz';
+	}
+	console.log(moji);
+}
+
 console.log('----------------6.九九----------------');
 /**
  * 九九を表示するプログラムを書いてください。
  */
 for (let i =1; i <=9; i++) {
+	console.log(`${i}の段`)
 	for (let j =1; j <=9; j++) {
 		let res = i * j;
-		console.log(res);
+		console.log(`${i}×${j}=${res}`);
 	}
 }
 
@@ -146,6 +189,14 @@ console.log('----------------2. 素数を表示するプログラム------------
  * 言い方をかえると約数が2つしかない数です。
  */
 
-for (let i =1; i =100; i++) {
-	
+for (let i = 2; i < 100; i++) {
+  for (let j = 2; j <= i; j++) {
+    if (i % j === 0 && j < i) {
+      break;
+    } 
+
+    if (i === j) {
+      console.log(i);
+    }
+  }
 }
